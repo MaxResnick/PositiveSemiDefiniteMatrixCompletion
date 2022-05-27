@@ -1,2 +1,5 @@
 # PositiveSemiDefiniteMatrixCompletion
 An implementation of a positive semi definite matrix completion algorithm in Julia for 18.335 advanced introduction to numerical analysis final project
+
+
+ Given a subset of the entries of a low rank positive semi definite matrix, can we recover the matrix exactly? Problems of this form are pivotal in recommender systems, survey analysis, sparse sensing, and exotic financial derivative pricing. The general matrix completion problem is NP-Hard; however, approximating rank conditions with the atomic norm transforms the problem into a nearby optimization problem which is convex and can therefore be solved exactly. I outline an exact alternating direction method of multipliers algorithm (ADMM) that can be used to complete arbitrary positive semi definite matrices from only a subset of their entries, and implement it in Julia. I present the results of numerical experiments and compare the algorithm with fast iterative thresholding (FISTA). The two algorithms perform similarly in the absence of noise. But, the ADMM algorithm performs better once noise is introduced and when completing higher rank matrices. 
